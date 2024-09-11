@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[Albums]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+	[UserId] INT NOT NULL ,
+	[Name] NVARCHAR(100) NOT NULL,
+	[CreatedOn] DATETIME NOT NULL,
+	CONSTRAINT [FK_Albums_Users] FOREIGN KEY ([UserId]) REFERENCES [dbo].[Users] ([Id])
+)
